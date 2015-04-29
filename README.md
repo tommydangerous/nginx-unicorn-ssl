@@ -8,12 +8,12 @@ $ docker run -d --name [container_name] [docker_image]
 #### Run Nginx container with link to rails app
 ```
 $ docker build -t nginx .
-$ docker run -d -p 80:80 --link [container_name]:app --volumes-from [container_name] --name nginx nginx
+$ docker run -d -p 80:80 --link [container_name]:app --volumes-from [container_name] --name nginx nginx-unicorn-ssl
 ```
 
 #### Docker Hub
 ```
-$ docker pull dangerous/nginx-unicorn
+$ docker pull dangerous/nginx-unicorn-ssl
 ```
 
 ### nginx.conf
